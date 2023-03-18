@@ -1,0 +1,7 @@
+- name: Create VPC
+  ec2_vpc_net:
+    name: "{{item}}"
+    cidr_block: "10.10.0.0/24"
+    region: "us-east-1"
+    state: present
+  register: vpc

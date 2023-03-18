@@ -1,0 +1,11 @@
+- name: Start an instance with a public IP address
+  amazon.aws.ec2_instance:
+    name: "{{item.ec2_name}}"
+    key_name: "{{item.ec2_key_name}}"
+    instance_type: t2.micro
+    security_group: default
+    network:
+      assign_public_ip: true
+    image_id: ami-0c9978668f8d55984
+    tags:
+      Environment: Testing

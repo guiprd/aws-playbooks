@@ -1,0 +1,9 @@
+- name: Create EC2
+  hosts: localhost
+  vars:
+    ansible_python_interpreter: "/usr/bin/python3.9"
+  tasks:
+    - include:  ../../defaults/tasks/create_ec2.yml
+      loop:
+        - {ec2_name: "ec2mack01", ec2_key_name: "mack01"}
+        - {ec2_name: "ec2mack02", ec2_key_name: "mack02"}

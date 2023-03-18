@@ -1,0 +1,8 @@
+- name: User Creation
+  hosts: localhost
+  vars:
+    ansible_python_interpreter: "/usr/bin/python3.9"
+  tasks:
+    - include: ../../defaults/tasks/create_user.yml
+      loop:
+        - mack1

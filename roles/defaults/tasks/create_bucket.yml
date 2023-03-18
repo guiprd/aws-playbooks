@@ -1,0 +1,4 @@
+- name: AWS S3 Create Bucket
+  s3_bucket:
+    name: "{{item}}"
+    state: present

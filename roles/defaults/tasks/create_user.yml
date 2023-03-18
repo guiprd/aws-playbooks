@@ -1,0 +1,4 @@
+- name: Create user
+  community.aws.iam_user:
+    name: "{{item}}"
+    state: present

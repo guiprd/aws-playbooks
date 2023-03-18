@@ -1,0 +1,9 @@
+- name: AWS S3 Create Bucket
+  hosts: localhost
+  vars:
+    ansible_python_interpreter: "/usr/bin/python3.9"
+  tasks:
+    - include: ../../defaults/tasks/create_bucket.yml
+      loop:
+        - mack_bucket01
+        - mack_bucket02
